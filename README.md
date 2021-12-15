@@ -22,9 +22,9 @@ $ npm run start:prod
 ## Env files
 
 ```bash
-#Port of app
+# Port of app
 PORT
     
-#Connection to MongoDB
+# Connection to MongoDB
 MONGO_CONNECTION
 ```
