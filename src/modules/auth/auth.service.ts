@@ -30,11 +30,13 @@ export class AuthService {
   async authorizeUser(dto: UserLoginDto) {
     const isValid = await this.validateExistingUser(dto.email);
     if (!isValid) {
+      this.logger.error(`User with email: ${dto.email} does not exist.`);
       return null;
     }
     const tokenPayload = {
       email: dto.email,
     };
+    this.logger.log(`User with email: ${dto.email} is authorized.`);
     return this.jwtService.sign(tokenPayload);
   }
 
