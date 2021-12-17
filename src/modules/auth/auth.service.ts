@@ -2,9 +2,9 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { User, UserDocument } from '../../schemas/user.schema';
 import { Model } from 'mongoose';
-import { UserRegistrationDto } from '../dto/UserRegistration.dto';
+import { UserRegistrationDto } from '../dto/user-registration.dto';
 import { JwtService } from '@nestjs/jwt';
-import { UserLoginDto } from '../dto/UserLogin.dto';
+import { UserLoginDto } from '../dto/user-login.dto';
 
 @Injectable()
 export class AuthService {
